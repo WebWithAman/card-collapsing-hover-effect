@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-------------------------------------------------
+       Title
+    -------------------------------------------------->
+    <title>Card Collapse Hover Effect</title>
+
+    <!---------------------------------------------------
+       Link External Custom Style Sheets
+    ----------------------------------------------------->
+    <link rel="stylesheet" href="Css/style.css">
+
+
+</head>
+
+<body>
+
+    <!---------------------------------------------------
+        Wrapper Start
+    ----------------------------------------------------->
+    <div class="wrapper">
+
+        <!---------------------------------------------------
+            Card Start
+        ----------------------------------------------------->
+        <div class="card">
+
+            <!---------------------------------------------------
+               Image Box Start
+            ----------------------------------------------------->
+            <div class="image-box">
+                <img src="Assets/Images/img.jpg" alt="nature">
+            </div>
+            <!---------------------------------------------------
+               Image Box End
+            ----------------------------------------------------->
+
+
+            <!---------------------------------------------------
+               Card Content Start
+            ----------------------------------------------------->
+            <div class="card-content">
+                <h2>WONDERFUL WORLD</h2>
+                <p>Tell me not her it needs not saying
+                    What tune the Lorem ipsum dolor sit enchantress.
+                </p>
+            </div>
+            <!---------------------------------------------------
+               Card Content End
+            ----------------------------------------------------->
+
+        </div>
+        <!---------------------------------------------------
+            Card End
+        ----------------------------------------------------->
+
+    </div>
+    <!---------------------------------------------------
+        Wrapper End
+    ----------------------------------------------------->
+
+
+
+    <!---------------------------------------------------
+        Internal Javascript Start
+    ----------------------------------------------------->
+    <script>
+
+        // Get Card And Card Content
+        const card = document.querySelector(".card");
+        const cardContent = document.querySelector(".card-content");
+
+
+        // Add Mouse Enter Event On Card to Display Card Content
+        card.addEventListener('mouseover', () => {
+            cardContent.style.maxHeight = cardContent.scrollHeight + 'px';
+        })
+
+        // Add Mouse Leave Event On Card to Hide Card Content
+        card.addEventListener('mouseleave', () => {
+            cardContent.style.maxHeight = 0;
+        })
+
+        
+    </script>
+    <!---------------------------------------------------
+        Internal Javascript End
+    ----------------------------------------------------->
+
+
+</body>
+
+</html>
