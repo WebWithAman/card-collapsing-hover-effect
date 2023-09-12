@@ -1,0 +1,155 @@
+/**********************************************************
+  Add Google Fonts
+**********************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800');
+
+
+/**********************************************************
+  Reset Default Properties Start
+**********************************************************/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* Now 1rem = 1em = 10px */
+
+    overflow-x: hidden;
+}
+
+
+/**********************************************************
+  Reset Default Properties End
+**********************************************************/
+
+
+/**********************************************************
+  Variables Start
+**********************************************************/
+:root {
+
+    /* Theme Colors */
+    --black: #000;
+    --white: #fff;
+    --bg-color: #c8d6e5;
+
+    /* Theme Fonts */
+    --font-family-1: 'Poppins', sans-serif;
+
+}
+
+/**********************************************************
+  Variables End
+**********************************************************/
+
+
+/**********************************************************
+  Wrapper Start
+**********************************************************/
+.wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    display: grid;
+    place-items: center;
+    font-family: var(--font-family-1);
+}
+
+/**********************************************************
+   Card Start
+**********************************************************/
+.card {
+    width: 32rem;
+    padding: 2.5rem;
+    background-color: var(--white);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.242), -5px -5px 10px rgba(0, 0, 0, 0.256);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/**********************************************************
+   Image Box Start
+**********************************************************/
+.card .image-box {
+    width: 100%;
+    height: 20rem;
+    transform: translateY(0%);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all .7s linear;
+    box-shadow: 0;
+}
+
+.card .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+
+/**********************************************************
+   Card Content Start
+**********************************************************/
+.card .card-content {
+    text-transform: uppercase;
+    text-align: center;
+    max-height: 0;
+    transition: all .7s linear;
+    overflow: hidden;
+}
+
+.card .card-content h2 {
+    color: #222f3e;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+}
+
+.card .card-content p {
+    color: var(--black);
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.card:hover>.card-content {
+    margin-top: -7rem;
+}
+
+.card:hover>.image-box {
+    transform: translateY(-50%);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.242), -5px -5px 10px rgba(0, 0, 0, 0.256);
+}
+
+
+
+/**********************************************************
+   Media Queries Start
+**********************************************************/
+@media only screen and (min-width:1700px) {
+    html {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/**********************************************************
+   Media Queries End
+**********************************************************/
